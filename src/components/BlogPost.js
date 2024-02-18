@@ -1,14 +1,14 @@
-import React from "react";
-import BlogContent from "./BlogContent";
-import Comment from "./Comment";
+// components/BlogPost.js
+import React from 'react';
+import BlogContent from './BlogContent';  // Correct path
 
-function BlogPost() {
+function BlogPost(props) {
   return (
-    <div id="blog-post">
-      <BlogContent articleText="Dear Reader: Bjarne Stroustrup has the perfect lecture oration." />
-      <Comment commentText="I agree with this statement. - Angela Merkel" />
-      <Comment commentText="A universal truth. - Noam Chomsky" />
-      <Comment commentText="Truth is singular. Its ‘versions’ are mistruths. - Sonmi-451" />
+    <div>
+      <h3>{props.title}</h3>
+      <BlogContent articleText={props.content} />
+      <p>Published on: {props.date}</p>
+      {/* ... rest of the component */}
     </div>
   );
 }

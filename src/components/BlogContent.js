@@ -1,7 +1,8 @@
-import React from "react";
+// components/BlogContent.js
+import React from 'react';
 
 function BlogContent(props) {
-  return <div id="blog-content">{props.articleText}</div>;
+  return <div>{props.articleText}</div>;
 }
 
 export default BlogContent;
